@@ -11,7 +11,7 @@ let image = document.querySelector(".phone-image")
 let color = document.querySelector(".phone-color")
 
 let gb128 = document.querySelector(".gb128")
-let gb256 = document.querySelector(".gb25``6")
+let gb256 = document.querySelector(".gb256")
 let gb512 = document.querySelector(".gb512")
 let gbt = document.querySelector(".gbt")
 let bool = null
@@ -155,16 +155,16 @@ gb512.onclick = () => {
 gbt.onclick = () => {
 	if (bool) {
 		phonePrice.innerHTML = "From $1499 or $62.45/mo. for 24 mo. before trade-in*"
-		gb512.classList.add("active")
+		gbt.classList.add("active")
 		gb256.classList.remove("active")
 		gb128.classList.remove("active")
-		gbt.classList.remove("active")
+		gb512.classList.remove("active")
 	} else {
 		phonePrice.innerHTML = "From $1599 or $66.62/mo. for 24 mo. before trade-in*"
-		gb512.classList.add("active")
+		gbt.classList.add("active")
 		gb256.classList.remove("active")
 		gb128.classList.remove("active")
-		gbt.classList.remove("active")
+		gb512.classList.remove("active")
 	}
 }
 
@@ -172,4 +172,16 @@ gbt.onclick = () => {
 
 
 
+let acc = document.querySelectorAll(".accordion");
 
+acc.forEach(item => {
+	item.onclick = () => {
+		item.classList.toggle("symb");
+		let panel = item.nextElementSibling;
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+		} else {
+			panel.style.maxHeight = panel.scrollHeight + "px";
+		}
+	}
+})
