@@ -16,6 +16,7 @@ let gb512 = document.querySelector(".gb512")
 let gbt = document.querySelector(".gbt")
 let bool = null
 
+
 iphoneFourteenPro.onclick = () => {
 	phoneTitle.innerHTML = "Buy iPhone 14 Pro"
 	phonePrice.innerHTML = "From $999 or $41.62/mo. for 24 mo. before trade-in*"

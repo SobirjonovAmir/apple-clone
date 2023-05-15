@@ -20,13 +20,23 @@ colorSwitch.forEach(color => {
 	}
 })
 
+
+
+let memoryPrice = {
+	"512gb": 0,
+	"1tb": 200,
+	"2tb": 600,
+	"4tb": 1200,
+}
+
 memorySwitch.forEach(memory => {
 	let productPrice = document.querySelector(".pricing")
 	memory.onclick = () => {
-		let price = memory.getAttribute("data-memory")
+		let key = memory.getAttribute("data-memory")
+		let price = memoryPrice[key]
 		let orgPrice = 1999
-		productPrice.innerText = orgPrice + +price
-
+		productPrice.innerHTML = orgPrice + price
+		
 		memorySwitch.forEach(item => {
 			item.classList.remove("active")
 		})
