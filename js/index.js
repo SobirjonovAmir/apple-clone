@@ -1,6 +1,6 @@
 let img = {
-	silver: "img/macbook-silver.png",
-	spaceGray: "img/macbook-spacegray.png"
+	silver: "../img/macbook-silver.png",
+	spaceGray: "../img/macbook-spacegray.png"
 }
 let colorSwitch = document.querySelectorAll(".color-switch")
 let memorySwitch = document.querySelectorAll(".memory-switch")
